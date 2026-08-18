@@ -1,0 +1,16 @@
+#Wed Aug 19 00:18:00 CST 2026
+base.0=/Users/duxg/work/AndroidStudyProject/Architecture-Android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/Users/duxg/work/AndroidStudyProject/Architecture-Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/Users/duxg/work/AndroidStudyProject/Architecture-Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
+base.3=/Users/duxg/work/AndroidStudyProject/Architecture-Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+base.4=/Users/duxg/work/AndroidStudyProject/Architecture-Android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=11/classes.dex
+path.3=2/classes.dex
+path.4=9/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex
+renamed.4=classes5.dex
