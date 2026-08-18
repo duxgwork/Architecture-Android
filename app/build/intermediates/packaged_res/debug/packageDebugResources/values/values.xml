@@ -7,7 +7,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Architecture-Project</string>
+    <string name="app_name">Architecture-Android</string>
     <string name="counter_label">计数器：%d</string>
     <string name="decrement">减少</string>
     <string name="increment">增加</string>

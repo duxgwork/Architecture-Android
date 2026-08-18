@@ -4,7 +4,7 @@
             "outputFile": "com.example.architecture.app-mergeDebugResources-35:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/6d01eeee7c91602c31a922cc94efe8a7/transformed/material-1.12.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "source": "/Users/duxg/.gradle/caches/8.14.5/transforms/6307bd9af195ada835fdb6707d35f07d/transformed/material-1.12.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

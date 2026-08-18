@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Architecture-Project</string>
+    <string name="app_name">Architecture-Android</string>
     <string name="counter_label">计数器：%d</string>
     <string name="increment">增加</string>
     <string name="decrement">减少</string>
