@@ -4,7 +4,7 @@
             "outputFile": "com.example.architecture.app-mergeDebugResources-35:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/d2cb65827901e4ab357f5a923fd02604/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/d9eead6e06f56e7499391f004b08a977/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/ba54ddf15e32c38a1337675178a35732/transformed/core-1.13.1/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/4a6fbb726a6d5430c6f5196309b9897c/transformed/core-1.13.1/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -4,7 +4,7 @@
             "outputFile": "com.example.architecture.app-mergeDebugResources-35:/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/6d01eeee7c91602c31a922cc94efe8a7/transformed/material-1.12.0/res/values-as/values-as.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/5c87122e81cc0941c9e2ab1b30328a08/transformed/material-1.12.0/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/ba54ddf15e32c38a1337675178a35732/transformed/core-1.13.1/res/values-as/values-as.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/4a6fbb726a6d5430c6f5196309b9897c/transformed/core-1.13.1/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/d2cb65827901e4ab357f5a923fd02604/transformed/appcompat-1.7.0/res/values-as/values-as.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/d9eead6e06f56e7499391f004b08a977/transformed/appcompat-1.7.0/res/values-as/values-as.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

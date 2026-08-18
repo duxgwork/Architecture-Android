@@ -4,7 +4,7 @@
             "outputFile": "com.example.architecture.app-mergeDebugResources-35:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/duxg/.gradle/caches/8.10.2/transforms/6d01eeee7c91602c31a922cc94efe8a7/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/5c87122e81cc0941c9e2ab1b30328a08/transformed/material-1.12.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

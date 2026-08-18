@@ -12,6 +12,7 @@ id btnIncrement
 id btnReset
 id tvCounter
 layout activity_main
+mipmap ic_launcher
 string app_name
 string counter_label
 string decrement
