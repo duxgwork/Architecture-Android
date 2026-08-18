@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Architecture-Project</string>
+    <string name="counter_label">计数器：%d</string>
+    <string name="increment">增加</string>
+    <string name="decrement">减少</string>
+    <string name="reset">重置</string>
+    <string name="reset_success">已重置</string>
+</resources>
