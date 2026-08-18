@@ -2,22 +2,34 @@ package com.example.architecture
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.example.architecture.data.repository.CounterRepositoryImpl
 import com.example.architecture.databinding.ActivityMainBinding
-import com.example.architecture.mvi.CounterIntent
+import com.example.architecture.domain.usecase.DecrementCounterUseCase
+import com.example.architecture.domain.usecase.IncrementCounterUseCase
+import com.example.architecture.domain.usecase.ResetCounterUseCase
+import com.example.architecture.presentation.counter.CounterEffect
+import com.example.architecture.presentation.counter.CounterViewModel
 import kotlinx.coroutines.launch
 
 /**
- * MVI View：渲染 State，分发 Intent
+ * Clean Architecture - 展示层：渲染 State，触发 ViewModel 方法
  */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val viewModel: CounterViewModel by viewModels()
+
+    private val viewModel: CounterViewModel by lazy {
+        val repository = CounterRepositoryImpl()
+        CounterViewModel.Factory(
+            incrementCounter = IncrementCounterUseCase(repository),
+            decrementCounter = DecrementCounterUseCase(repository),
+            resetCounter = ResetCounterUseCase(repository)
+        ).create(CounterViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,20 +41,20 @@ class MainActivity : AppCompatActivity() {
         collectEffects()
     }
 
-    /** 将用户操作转化为 Intent 分发给 ViewModel */
+    /** 将用户操作委托给 ViewModel */
     private fun setupListeners() {
         binding.btnIncrement.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Increment)
+            viewModel.increment()
         }
         binding.btnDecrement.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Decrement)
+            viewModel.decrement()
         }
         binding.btnReset.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Reset)
+            viewModel.reset()
         }
     }
 
-    /** 收集 State，渲染 UI */
+    /** 收集 UI 状态，渲染界面 */
     private fun collectState() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -59,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.effect.collect { effect ->
                     when (effect) {
-                        is com.example.architecture.mvi.CounterEffect.ResetSuccess ->
+                        is CounterEffect.ResetSuccess ->
                             Toast.makeText(
                                 this@MainActivity,
                                 R.string.reset_success,
