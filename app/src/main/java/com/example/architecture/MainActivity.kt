@@ -4,15 +4,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import com.example.architecture.databinding.ActivityMainBinding
-import com.example.architecture.mvi.CounterIntent
-import kotlinx.coroutines.launch
 
 /**
- * MVI View：渲染 State，分发 Intent
+ * MVVM View：直接观察 ViewModel 的 LiveData，调用其暴露的方法
  */
 class MainActivity : AppCompatActivity() {
 
@@ -25,48 +20,34 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupListeners()
-        collectState()
-        collectEffects()
+        observeViewModel()
     }
 
-    /** 将用户操作转化为 Intent 分发给 ViewModel */
+    /** 将按钮点击直接绑定到 ViewModel 的方法 */
     private fun setupListeners() {
         binding.btnIncrement.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Increment)
+            viewModel.increment()
         }
         binding.btnDecrement.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Decrement)
+            viewModel.decrement()
         }
         binding.btnReset.setOnClickListener {
-            viewModel.dispatch(CounterIntent.Reset)
+            viewModel.reset()
         }
     }
 
-    /** 收集 State，渲染 UI */
-    private fun collectState() {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.state.collect { state ->
-                    binding.tvCounter.text = getString(R.string.counter_label, state.count)
-                }
-            }
+    /** 观察 ViewModel 暴露的 LiveData */
+    private fun observeViewModel() {
+        viewModel.count.observe(this) { count ->
+            binding.tvCounter.text = getString(R.string.counter_label, count)
         }
-    }
-
-    /** 收集一次性 Side Effect */
-    private fun collectEffects() {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.effect.collect { effect ->
-                    when (effect) {
-                        is com.example.architecture.mvi.CounterEffect.ResetSuccess ->
-                            Toast.makeText(
-                                this@MainActivity,
-                                R.string.reset_success,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                    }
-                }
+        viewModel.resetEvent.observe(this) { event ->
+            event.getContentIfNotHandled()?.let {
+                Toast.makeText(
+                    this@MainActivity,
+                    R.string.reset_success,
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
