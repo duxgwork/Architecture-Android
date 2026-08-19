@@ -30,7 +30,9 @@ class CounterViewModel(
 
     fun increment() {
         viewModelScope.launch {
-            val result = incrementCounter()
+            // 以下两种写法完全等价：
+//            val result =incrementCounter.invoke()
+            val result =incrementCounter()   // ← 语法糖，编译器自动翻译为上一行
             _state.value = CounterUiState(count = result.value)
         }
     }
