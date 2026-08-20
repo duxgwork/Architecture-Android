@@ -2,5 +2,9 @@
     {
         "merged": "com.example.architecture.app-mergeDebugResources-36:/layout/activity_main.xml",
         "source": "com.example.architecture.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.architecture.app-mergeDebugResources-36:/layout/activity_websocket_demo.xml",
+        "source": "com.example.architecture.app-main-39:/layout/activity_websocket_demo.xml"
     }
 ]

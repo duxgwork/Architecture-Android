@@ -44,9 +44,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnWebSocketDemo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnDecrement" />
+
+    <Button
+        android:id="@+id/btnWebSocketDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebSocket Topic 路由演示"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReset" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,12 @@
 package com.example.architecture
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.architecture.databinding.ActivityMainBinding
+import com.example.architecture.demo.WebSocketDemoActivity
 
 /**
  * MVVM View：直接观察 ViewModel 的 LiveData，调用其暴露的方法
@@ -33,6 +35,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnReset.setOnClickListener {
             viewModel.reset()
+        }
+        // 跳转到 WebSocket Topic 路由演示
+        binding.btnWebSocketDemo.setOnClickListener {
+            startActivity(Intent(this, WebSocketDemoActivity::class.java))
         }
     }
 

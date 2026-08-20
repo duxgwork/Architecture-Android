@@ -4,7 +4,7 @@
             "outputFile": "com.example.architecture.app-mergeDebugResources-35:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/5c87122e81cc0941c9e2ab1b30328a08/transformed/material-1.12.0/res/values-v28/values-v28.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/b51b732eda329f3155855608fbac6097/transformed/material-1.12.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/d9eead6e06f56e7499391f004b08a977/transformed/appcompat-1.7.0/res/values-v28/values-v28.xml",
+                    "source": "/Users/duxg/.gradle/caches/9.7.0/transforms/e1eb9d07272747a68cc55f5d1b019c71/transformed/appcompat-1.7.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

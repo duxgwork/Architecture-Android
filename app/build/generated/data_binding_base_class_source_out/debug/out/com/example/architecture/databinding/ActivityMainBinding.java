@@ -30,14 +30,19 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnReset;
 
   @NonNull
+  public final Button btnWebSocketDemo;
+
+  @NonNull
   public final TextView tvCounter;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnDecrement,
-      @NonNull Button btnIncrement, @NonNull Button btnReset, @NonNull TextView tvCounter) {
+      @NonNull Button btnIncrement, @NonNull Button btnReset, @NonNull Button btnWebSocketDemo,
+      @NonNull TextView tvCounter) {
     this.rootView = rootView;
     this.btnDecrement = btnDecrement;
     this.btnIncrement = btnIncrement;
     this.btnReset = btnReset;
+    this.btnWebSocketDemo = btnWebSocketDemo;
     this.tvCounter = tvCounter;
   }
 
@@ -86,6 +91,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnWebSocketDemo;
+      Button btnWebSocketDemo = ViewBindings.findChildViewById(rootView, id);
+      if (btnWebSocketDemo == null) {
+        break missingId;
+      }
+
       id = R.id.tvCounter;
       TextView tvCounter = ViewBindings.findChildViewById(rootView, id);
       if (tvCounter == null) {
@@ -93,7 +104,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, btnDecrement, btnIncrement,
-          btnReset, tvCounter);
+          btnReset, btnWebSocketDemo, tvCounter);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
